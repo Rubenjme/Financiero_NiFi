@@ -92,9 +92,16 @@ Configuraciones en NiFi:
    - Se analizan precisión, recall y otras métricas para determinar el mejor modelo.
 
 ## Conclusiones
-
-
+- **Ingesta automatizada**: NiFi facilita la orquestación de flujos de datos, reduciendo pasos manuales.  
+- **Dataset desbalanceado**: El fraude ~0.17% exige métricas específicas (AUPRC, recall de la clase minoritaria).  
+- **Random Forest / XGBoost** han ofrecido altos valores de recall y precisión, superando a la regresión logística.
+- **Infraestructura reproducible**: Con Docker se simplifica la puesta en marcha y se asegura la portabilidad del pipeline.
 
 ## Próximas mejoras
 
+1. **Implementar un orquestador** como Airflow, Prefect para programar la ejecución recurrente y el refresco de datos.  
+2. **Balance de clases** avanzado con técnicas como SMOTE o undersampling para mejorar la recall de la clase de fraude.  
+3. **Streaming**: Adaptar NiFi para procesar transacciones en tiempo real (Kafka/NiFi).  
+4. **Monitoreo del modelo**: Integrar una capa MLOps (por ejemplo, MLflow o un dashboard) para vigilar la deriva del modelo en producción.  
+5. **Seguridad**: Añadir cifrado de datos sensibles y autenticación/seguridad avanzada en NiFi y PostgreSQL.
 
