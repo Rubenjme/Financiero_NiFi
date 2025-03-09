@@ -39,8 +39,35 @@ Este proyecto demuestra un **pipeline de análisis financiero** orientado a la d
      - docker run --name nifi -p 9090:8080 -e NIFI_WEB_HTTP_PORT=8080 -v "C:/Users/Ruben/Desktop/Data:/data" -d nifi-with-pgdriver:1.21
    - Se accede a NiFi a través del navegador -> http://localhost:9090/nifi
 
+Prueba de funcionamiento en Docker:
 <div align="center">
   <img src="https://github.com/user-attachments/assets/dee8be2d-fb83-4041-b4e1-e53599d76eb2">
+</div>
+
+Configuraciones en NiFi:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a878e6f7-5a6a-4994-a603-6265e3ee438e">
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/10bcef11-65eb-44bb-9797-d997c0cb2336">
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/25284950-105d-4f1d-af92-509cca6f0ece">
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6ec2324f-38e6-4e34-943a-7156295b76dc">
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2c98fe4b-7b4d-4e89-8360-3714b4ab96e5">
+</div>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7a7beb12-bd25-4edc-9895-7ce76549b59d">
 </div>
 
 2. **Almacenamiento en PostgreSQL**:  
@@ -51,9 +78,10 @@ Este proyecto demuestra un **pipeline de análisis financiero** orientado a la d
   <img src="https://github.com/user-attachments/assets/e66a4b8d-c2bc-4845-b3a2-60fcba1a3426">
 </div>
 
+
 3. **EDA (Exploratory Data Analysis) en Python**:  
    - Con `pandas`, se extraen los datos desde PostgreSQL (vía `psycopg2`).  
-   - Se examinan duplicados, valores nulos, distribución de la variable objetivo y de otras variables clave (`Time`, `Amount`, etc.).  
+   - Se examinan duplicados, valores nulos, distribución de la variable objetivo y de otras variables (`Time`, `Amount`, etc.).  
    - Se genera un **dataset limpio** (`creditcard_clean.csv`).  
 4. **Modelado de ML**:  
    - En un notebook dedicado a modelos, se cargan los datos limpios.  
@@ -62,8 +90,6 @@ Este proyecto demuestra un **pipeline de análisis financiero** orientado a la d
    - Opcionalmente, se realiza optimización de hiperparámetros con `GridSearchCV` o `RandomizedSearchCV`.  
 5. **Comparación de resultados**:  
    - Se analizan precisión, recall y otras métricas para determinar el mejor modelo.
-
-
 
 ## Conclusiones
 
