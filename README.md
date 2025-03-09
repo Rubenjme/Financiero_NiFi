@@ -1,5 +1,9 @@
 # Financial analysis pipeline with PostgreSQL and NiFi
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b695e7b2-9c09-4ab1-8560-6186d41334bd">
+</div>
+
 ## Descripción del proyecto
 
 Este proyecto demuestra un **pipeline de análisis financiero** orientado a la detección de fraudes en transacciones con tarjetas de crédito. El flujo abarca desde la ingesta de datos (con Apache NiFi y PostgreSQL) hasta el análisis exploratorio (EDA) y el modelado de Machine Learning en Python.  
